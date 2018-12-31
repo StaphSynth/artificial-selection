@@ -1,11 +1,12 @@
 require './sentence'
 
+MUTATION_RATE = ARGV[0].nil? ? (raise ArgumentError, 'Specify a mutation rate!') : (ARGV[0].to_f * 1000)
 SHAKESPEARE = 'methinks it is like a weasel'.freeze
-sentence = Sentence.new(length: SHAKESPEARE.length)
+sentence = Sentence.new(length: SHAKESPEARE.length, mutation_rate: MUTATION_RATE)
 generation = 1
 start_time = Time.now
 
-puts sentence.sentence
+puts sentence
 
 loop do
   if sentence == SHAKESPEARE
