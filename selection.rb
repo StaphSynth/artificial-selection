@@ -19,5 +19,5 @@ loop do
   end
 end
 
-puts "Generation #{generation}: #{sentence.sentence}"
+puts "Generation #{generation}: #{sentence}"
 puts "Solved in #{Time.now - start_time} seconds"

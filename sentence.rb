@@ -37,6 +37,10 @@ class Sentence
     sentence == (operand.class == self.class ? operand.sentence : operand)
   end
 
+  def to_s
+    sentence
+  end
+
   private
 
   def generate(length)
